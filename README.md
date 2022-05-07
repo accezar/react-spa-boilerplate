@@ -48,8 +48,7 @@ Clonar o projeto
 ```bash
   git clone git@github.com:accezar/react-spa-boilerplate.git
 ```
-
-Vá até o diretório do projeto
+Navegue até o diretório do projeto
 
 ```bash
   cd react-spa-boilerplate
@@ -61,12 +60,13 @@ Instale as dependências
   yarn
 ```
 
+Crie um arquivo `.env` com a variavel `SKIP_PREFLIGHT_CHECK=true`;
+
 Inicie o server
 
 ```bash
-  yarn start
+  yarn dev
 ```
-
 
 ## Contribuindo
 

@@ -1,7 +1,7 @@
 ---
 name: Documentation Request
 about: Solicite a adição ou alteração de uma documentação
-title: doc - [componente] - título da solicitação
+title: doc - [componente/contexto] - título da solicitação
 labels: documentation
 assignees: ''
 
