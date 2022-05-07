@@ -1,0 +1,116 @@
+{
+  "name": "react-spa-boilerplate",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "build:serve-local": "react-scripts build && serve -s build",
+    "eject": "react-scripts eject",
+    "type:check": "tsc --pretty --noEmit",
+    "type:watch": "tsc --pretty -w",
+    "lint": "eslint 'src/**/*.{ts,tsx,js,jsx}'",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest --verbose --env=jsdom",
+    "test:watch": "jest --watch --verbose --env=jsdom",
+    "test:unit": "jest --verbose --env=jsdom --config=jest-unit.config.js",
+    "test:unit:watch": "jest --verbose --env=jsdom --config=jest-unit.config.js --watchAll",
+    "test:integration": "jest --verbose --env=jsdom --config=jest-integration.config.js",
+    "test:integration:watch": "jest --verbose --env=jsdom --config=jest-integration.config.js --watchAll",
+    "format": "prettier --write **/*.{js,ts,tsx}",
+    "format:check": "prettier --check .",
+    "prepare": "is-ci || husky install",
+    "commit": "lint-staged && cz --no-verify",
+    "clean": "rm -rf node_modules && rm yarn.lock"
+  },
+  "dependencies": {
+    "@cavilha/box": "^0.0.1",
+    "@cavilha/flex": "^0.0.1",
+    "@cavilha/layout": "^0.0.1",
+    "@cavilha/table": "^0.0.6",
+    "@cavilha/text": "^0.0.1",
+    "@cavilha/theme": "^0.0.1",
+    "@hookform/resolvers": "^0.1.1",
+    "@stitches/react": "0.2.2",
+    "axios": "^0.27.2",
+    "date-fns": "^2.16.1",
+    "graphql": "^15.5.3",
+    "graphql-hooks": "^5.4.0",
+    "graphql-request": "^3.5.0",
+    "query-string": "^6.13.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^6.8.1",
+    "react-router-dom": "6",
+    "react-scripts": "4.0.3",
+    "react-shimmer": "^3.1.1",
+    "react-text-mask": "^5.4.3",
+    "react-toastify": "^8.2.0",
+    "serve": "^13.0.2",
+    "text-mask-addons": "^3.8.0",
+    "typesafe-actions": "^5.1.0",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/graphql": "^14.5.0",
+    "@types/jest": "^27.0.1",
+    "@types/react": "17.0.21",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-text-mask": "^5.4.6",
+    "@types/yup": "^0.29.7",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "babel-jest": "^26.6.3",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "husky": "^7.0.0",
+    "is-ci": "^3.0.0",
+    "jest": "^27.0.6",
+    "jest-watch-typeahead": "^0.5.0",
+    "next-compose-plugins": "^2.2.1",
+    "prettier": "^2.4.0",
+    "typescript": "4.4.3"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx|js|jsx)": [
+      "yarn eslint",
+      "yarn format"
+    ],
+    "*.@(json)": [
+      "yarn format"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}
